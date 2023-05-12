@@ -1,0 +1,40 @@
+name: binarydepth
+channels:
+  - default
+  - pytorch
+  - conda-forge
+  - pytorch3d
+  - fvcore
+  - iopath
+dependencies:
+  - python=3.9.7
+  - pytorch=1.10.0
+  - torchvision=0.11.1
+  - cudatoolkit=11.3
+  - pytorch-lightning=1.5.4 # training utils
+  - pillow=9.2.0 # image op
+  - opencv=4.5.3 # renders and video
+  - tensorboard=2.12 # logging
+  - matplotlib=3.7.1 # plotting
+  - fvcore=0.1.5 # for pytorch3d
+  - iopath=0.1.9 # for pytorch3d
+  - pytorch3d=0.7.3 # for plane eval
+  - pip
+  - pandas=1.5.3 # score printing
+  - pip:
+    - kornia==0.6.7 # gradients
+    - antialiased-cnns==0.3 # anti aliased resnet
+    - efficientnet_pytorch==0.7.1
+    - timm==0.6.12 # efficent
+    - trimesh==3.20.0 # mesh loading/storage, and mesh generation
+    - transforms3d==0.4.1 # for NeuralRecon's arkit
+    - einops==0.6.0 # batching one liners
+    - moviepy==1.0.3 # storing videos
+    - pyrender==0.1.45 # rendering meshes
+    - open3d==0.14.1 # mesh fusion
+    - py-lz4framed==0.14.0
+    - pytest
+    - h5py==3.8.0
+    - scipy==1.10.1 # transformations and a few others
+    - setuptools==59.5.0 # fix for tensorboard
+    - black==23.3.0

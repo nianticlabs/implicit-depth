@@ -1,0 +1,11 @@
+*.pyc
+.vscode/
+debug_results/
+logs/
+logs
+models/*.ckpt
+weights/*.ckpt
+**__pycache__**
+.DS_Store
+.ipynb_checkpoints
+tmp/
