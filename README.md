@@ -7,7 +7,7 @@ This is the reference PyTorch implementation for training and testing our implci
 > [Jamie Watson](https://www.linkedin.com/in/jamie-watson-544825127/), [Mohamed Sayed](https://masayed.com), [Zawar Qureshi](https://qureshizawar.github.io/), [Gabriel J Brostow](http://www0.cs.ucl.ac.uk/staff/g.brostow/),
 [Sara Vicente](https://scholar.google.co.uk/citations?user=7wWsNNcAAAAJ&hl=en), [Oisin Mac Aodha](https://homepages.inf.ed.ac.uk/omacaod/) and [Michael Firman](http://www.michaelfirman.co.uk)
 >
-> [Paper, CVPR 2023 (arXiv pdf)](TODO), [Project Page](https://nianticlabs.github.io/implicit-depth/)
+> [Paper, CVPR 2023 (arXiv pdf w/ supp)](https://arxiv.org/pdf/2305.07014.pdf), [Project Page](https://nianticlabs.github.io/implicit-depth/)
 
 https://user-images.githubusercontent.com/6114258/233341766-a6b465a1-f796-4ca4-a9b4-a497bf75eb1a.mp4
 
