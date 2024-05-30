@@ -28,6 +28,43 @@ You will need to update the data configs to point to the location of your
 ScanNetv2 data. You can do this by setting `dataset_path: <YOUR_DATA_LOCATION>` in the six 
 `configs/data/scannet_*.yaml` files.
 
+# Hypersim
+
+To Download the Hypersim dataset, please follow the the intructions in the [Hypersim Datatset](https://github.com/apple/ml-hypersim) repo.
+
+Once the dataset has been downloaded and extracted, please update the `dataset_path` argument for Hypersim data configs in `configs/data/` to point to the extracted dataset.
+
+Note that the depth maps provided as part of the dataset are not planar depths and need to be planarised. We have provided helper functions to planarise the depth maps (see `_get_prependicular_depths` method in `datasets/hypersim_dataset.py`). The planarised depth maps can be generated with the help of the `data_scripts/generate_hypersim_planar_depths.py` script:
+
+```bash
+# train
+python ./data_scripts/generate_hypersim_planar_depths.py \
+    --data_config configs/data/hypersim_default_train.yaml \
+    --num_workers 8
+
+# val
+python ./data_scripts/generate_hypersim_planar_depths.py \
+    --data_config configs/data/hypersim_default_val.yaml \
+    --num_workers 8
+```
+
+Next, we need to generate the frame tuples similarly to ScanNetv2 dataset:
+
+```bash
+# train
+python ./data_scripts/generate_train_tuples.py
+    --data_config configs/data/hypersim_default_train.yaml
+    --num_workers 8
+
+# val
+python ./data_scripts/generate_val_tuples.py
+    --data_config configs/data/hypersim_default_val.yaml
+    --num_workers 8
+```
+
+After the tuple generation, you should be ready to train on hypersim using the provided configs!
+
+We provide the train and val splits we used for our experiments (see `data_splits/hypersim/bd_split/train_files_bd.json` and `data_splits/hypersim/bd_split/val_files_bd.json`)
 ## 📦 Models
 
 We provide the following pretrained models for you to try out - we suggest using the HyperSim trained model to obtain the best qualitative results.
