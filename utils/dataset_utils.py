@@ -6,6 +6,10 @@ from datasets.scannet_dataset import ScannetDataset
 from datasets.scanniverse_dataset import ScanniverseDataset
 from datasets.seven_scenes_dataset import SevenScenesDataset
 from datasets.vdr_dataset import VDRDataset
+from datasets.scanniverse_dataset import ScanniverseDataset
+from datasets.hypersim_dataset import HypersimDataset
+
+import json
 
 
 def get_dataset(dataset_name, split_filepath, single_debug_scan_id=None, verbose=True):
